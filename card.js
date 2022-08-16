@@ -41,8 +41,8 @@ github.com/saurabhdaware/github-profile-card/blob/master/card.js
                  <td><img class='github-card-avatar' src='${card.avatar_url}' width=100></td>
                  <td class='github-card-name'>
                      ${card.name}<br />
-                     <span style='color:#222;font-size:9pt;'>Followers: ${card.followers} | Following: ${card.following}</span><br />
-                     <a target='_blank' class='github-card-button' href='${card.html_url}'>View profile</a>
+                     <span style='color:whitesmoke;font-size:9pt;'>Followers: ${card.followers} | Following: ${card.following}</span><br />
+                     <a target='_blank' class='github-card-button' href='${card.html_url}' target="blank_">View profile</a>
                  </td>
              </table>
          </div><br /><br /><br /><br />
@@ -72,7 +72,7 @@ github.com/saurabhdaware/github-profile-card/blob/master/card.js
                                     if (!card.language) { card.language = ' -'; }
                                     var div = document.createElement('div');
                                     div.id = 'github-card-repo' + (i + 1);
-                                    div.innerHTML = "<a class='github-card-repo-headline' href=" + card.html_url + "><b>" + card.name + "</b></a><br><span class='github-card-repo-desc'>" + card.description + "</span><br><span class='gc-lang' style='font-size:8pt;'>&#9733;" + card.language + "</span>";
+                                    div.innerHTML = "<a class='github-card-repo-headline' target=\"blank_\" href=" + card.html_url + "><b>" + card.name + "</b></a><br><span class='github-card-repo-desc'>" + card.description + "</span><br><span class='gc-lang' style='font-size:8pt;'>&#9733;" + card.language + "</span>";
                                     div.classList.add('github-card-repo');
                                     cardContainer.querySelector('.github-card-repos').appendChild(div);
                                 });

@@ -9,6 +9,11 @@
 html {
     background: #16161d;
     -webkit-font-smoothing: antialiased !important;
+    color: whitesmoke;
+}
+
+h5 {
+    margin-top: 4px;
 }
 
 body,
@@ -131,44 +136,16 @@ button {
 }
 
 .align_content {
-    position: absolute;
+    position: inherit;
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
-ul.nav {
-    border-bottom: 1px solid #189b80;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    height: 36px;
-    line-height: 36px;
-    background: #16161d;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
-}
-
-ul.nav li {
-    float: left;
-}
-
-ul.nav a {
-    display: block;
-    padding: 0 28px;
-    color: #ccece6;
-    text-decoration: none;
-}
-
-ul.nav a:hover,
-ul.nav li.current a {
-    background: #086754;
-}
-
 .textar {
-    width: 600px;
-    height: 280px;
+    min-width: 600px;
+    min-height: 280px;
     overflow-x: hidden;
     top: -7px;
     position: relative;
@@ -262,7 +239,7 @@ a.tgme_action_button_new {
     text-transform: uppercase;
     vertical-align: top;
     background-color: var(--accent-btn-color);
-    background-color: #377bac;
+    background-color: #189b80;
 }
 
 .tgme_page_additional {
@@ -273,4 +250,67 @@ a.tgme_action_button_new {
     margin: 20px 0 0;
     color: var(--second-text-color);
     margin-top: 24px;
+}
+
+.sidenav {
+    min-height: 100%;
+    width: 120px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+}
+
+.sidenav a,
+.dropdown-btn {
+    margin-top: 5px;
+    padding: 0px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+.sidenav a:hover,
+.dropdown-btn:hover {
+    color: #f1f1f1;
+    background-color: #5dc390;
+}
+
+.main {
+    margin-left: 120px;
+    font-size: 20px;
+    padding: 0px 10px;
+}
+
+.active {
+    background-color: rgba(93, 195, 144, 0.7);
+    color: white;
+}
+
+.dropdown-container {
+    display: none;
+    background-color: #262626;
+}
+
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
 }

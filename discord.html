@@ -11,19 +11,41 @@
 
 <body>
 
-    <ul class="nav">
-        <li><a href="index.html">Index</a></li>
-        <li><a href="twitter.html">Twitter</a></li>
-        <li><a href="discord.html">Discord</a></li>
-        <li><a href="telegram.html">Telegram</a></li>
-        <li><a href="github.html">Github</a></li>
-        <h2 style="float:right">n0nexist's cool website&nbsp;</h2>
-    </ul>
-    <br>
+    <div class="sidenav">
+        <a href="index.html">Index</a>
 
-    <div class="align_content">
+        <button class="dropdown-btn">Socials [...]
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="twitter.html">Twitter</a>
+            <a href="discord.html">Discord</a>
+            <a href="telegram.html">Telegram</a>
+            <a href="github.html">Github</a>
+        </div>
 
-        <h2>n0nexist's cool discord</h2>
+    </div>
+
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+    <div class="main">
+
+        <h5><i>loading discord...</i></h5>
 
         <br>
 

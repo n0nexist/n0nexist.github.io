@@ -11,41 +11,68 @@
 
 <body>
 
-    <ul class="nav">
-        <li><a href="index.html">Index</a></li>
-        <li><a href="twitter.html">Twitter</a></li>
-        <li><a href="discord.html">Discord</a></li>
-        <li><a href="telegram.html">Telegram</a></li>
-        <li><a href="github.html">Github</a></li>
-        <h2 style="float:right">n0nexist's cool website&nbsp;</h2>
-    </ul>
-    <br>
 
-    <div class="align_content">
+
+    <div class="sidenav">
+        <a href="index.html">Index</a>
+        <button class="dropdown-btn">Socials <i class="fa fa-caret-down">[...]</i>
+        </button>
+        <div class="dropdown-container">
+            <a href="twitter.html">Twitter</a>
+            <a href="discord.html">Discord</a>
+            <a href="telegram.html">Telegram</a>
+            <a href="github.html">Github</a>
+        </div>
+        <br>
+        <!--<button class="dropdown-btn" onclick=hide_showlist() id="myDIV"><i>hide</i>
+        </button>!-->
+    </div>
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+
+        /*function hide_showlist() {
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }*/
+    </script>
+
+
+    <div class="main">
         <h2>Welcome to n0nexist's website!</h2>
         <p>click one of the tabs to select my social media</p>
         <br><br>
         <h5>&nbsp;<i>loading bio...</i></h5>
         <br>
-        <textarea readonly class="textar">
-root@n0nexist:~$ python3
-Python 3.*.* (main, *** ** ****, **:**:**) [GCC *.*.*] on linux
-Type "help", "copyright", "credits" or "license" for more information.
-
->>> from none_xist import bio
-
->>> biography = bio.getBio()
-
->>> biography['Country']
-'italy'
-
->>> biography['Hobbies']
-['Coding', 'Gym', 'Playing videogames', 'Touching grass']
-
->>> biography['Name']
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-KeyError: 'Name'</textarea>
+        <div class="textar">
+            <p>
+                root@n0nexist:~$ python3<br> Python 3.*.* (main, *** ** ****, **:**:**) [GCC *.*.*] on linux<br> Type "help", "copyright", "credits" or "license" for more information.<br>
+                <br> >>> from none_xist import bio<br>
+                <br> >>> biography = bio.getBio()<br>
+                <br> >>> biography['Country']<br> 'italy'
+                <br>
+                <br> >>> biography['Hobbies']<br> ['Coding', 'Gym', 'Playing videogames', 'Touching grass']<br>
+                <br> >>> biography['Name']<br> Traceback (most recent call last):<br> File "
+                <stdin>", line 1, in
+                    <module><br> KeyError: 'Name'<br>
+            </p>
+        </div>
 
     </div>
 
