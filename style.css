@@ -24,7 +24,7 @@ button {
 }
 
 .profilecard {
-    position: absolute;
+    position: inherit;
     width: 250px;
     margin: 0 auto 0 auto;
     border-radius: 4px;
@@ -132,9 +132,10 @@ button {
 
 .align_content {
     position: absolute;
-    left: auto;
-    top: auto;
-    padding: 10px;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 ul.nav {
@@ -176,7 +177,7 @@ ul.nav li.current a {
     font-size: max(16px, 1em);
     font-family: inherit;
     padding: 0.25em 0.5em;
-    background-color: #fff;
+    background-color: rgb(20, 20, 20);
     border: 2px solid var(--input-border);
     border-radius: 4px;
     line-height: 1;
