@@ -23,9 +23,11 @@ button {
 }
 
 .content {
+    margin-top: 12px;
     width: 100%;
-    display: flex;
     flex-direction: row;
+    white-space: nowrap;
+    float: left;
 }
 
 .profilecard {
@@ -36,6 +38,7 @@ button {
     border: 1px solid #23262a;
     background: #2f3136;
     display: flex;
+    float: left;
     flex-direction: column;
 }
 
@@ -165,6 +168,7 @@ button {
 }
 
 .tgme_page {
+    float: left;
     transform: scale(1, 0.95);
     position: relative;
     margin: 0px auto;
@@ -313,4 +317,19 @@ a.tgme_action_button_new {
     .sidenav a {
         font-size: 18px;
     }
+}
+
+.twitter-tweet {
+    text-decoration: line-through;
+    display: inline-block;
+    font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    max-width: 468px;
+}
+
+.git_hub {
+    margin-top: 12px;
 }

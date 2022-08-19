@@ -4,7 +4,7 @@ github.com/saurabhdaware/github-profile-card/blob/master/cardStyle.js
 
 @import url('https://fonts.googleapis.com/css?family=Play');
 .github-card {
-    padding: 0;
+    padding: 0px;
     display: inline-block;
     border-radius: 16px;
     overflow: hidden;
@@ -17,7 +17,7 @@ github.com/saurabhdaware/github-profile-card/blob/master/cardStyle.js
 
 .github-card-container {
     position: relative;
-    padding: 0;
+    padding: 3px;
     margin: 0;
     background-color: rgb(9, 9, 9);
     height: 100%;
@@ -38,7 +38,8 @@ github.com/saurabhdaware/github-profile-card/blob/master/cardStyle.js
 .github-card-avatar {
     border-radius: 200px;
     border: 1px solid black;
-    margin-left: 10px;
+    margin-left: 3px;
+    margin-right: 2px;
 }
 
 .github-card-logo {
